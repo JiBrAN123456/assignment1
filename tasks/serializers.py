@@ -17,11 +17,11 @@ class TaskSerializer(serializers.ModelSerializer):
         fields = "__all__"       
 
 
-class TaskCreationSerializer(serializers.ModelSerializer):
+class TaskCreateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Task           
-        fields = [ 'id', 'name' , ' description' , 'status' ] 
+        fields = [ 'id', 'name' , 'description' , 'status' ] 
 
 
     def create(self , validated_data):
